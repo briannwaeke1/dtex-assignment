@@ -1,0 +1,47 @@
+.headerContainer {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  padding: 0 20px;
+  height: 60px;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  justify-content: space-between;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 20px;
+}
+
+.greeting {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.timeIconContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 5px;
+}
+
+.iconButton {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 7px;
+  cursor: pointer;
+}
