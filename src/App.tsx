@@ -1,10 +1,10 @@
+import { Box } from "@mui/material";
 import cn from "classnames";
 import { useState } from "react";
 import styles from "./App.module.scss";
+import { EmployeeStats } from "./components/EmployeeStats";
 import { Header } from "./components/Header";
 import { SideDrawer } from "./components/SideDrawer";
-("use client");
-
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(true);
 
@@ -17,9 +17,12 @@ function App() {
         open={drawerOpen}
         onOpen={handleDrawerOpen}
       />
-      <section className={cn(styles.content, { [styles.contentShift]: !open })}>
+      <Box
+        className={cn(styles.content, { [styles.contentShift]: !drawerOpen })}
+      >
         <Header />
-      </section>
+        <EmployeeStats />
+      </Box>
     </main>
   );
 }

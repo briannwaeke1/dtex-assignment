@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.footerText {
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer_rightContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}

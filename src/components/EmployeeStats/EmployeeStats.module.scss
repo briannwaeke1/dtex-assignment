@@ -1,0 +1,25 @@
+.container {
+  background-color: #f7f8fc;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+.actionBarContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.statsCardContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  gap: 20px;
+  justify-content: center;
+}
