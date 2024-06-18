@@ -1,16 +1,14 @@
 import { Avatar, AvatarGroup } from "@mui/material";
 import { employees } from "./constants.ts";
 
-export const EmployeeAvatar = () => {
+export const AvatarRow = () => {
   return (
     <AvatarGroup
       max={5}
       sx={{
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "start",
         height: "100%",
-        mr: 2,
       }}
     >
       {employees.map(({ employeeId, employeeName }) => (

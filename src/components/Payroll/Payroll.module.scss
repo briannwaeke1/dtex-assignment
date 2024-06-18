@@ -1,0 +1,26 @@
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.card {
+  width: 100%;
+  padding: 2px;
+  height: 80px;
+}

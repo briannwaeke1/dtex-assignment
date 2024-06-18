@@ -1,57 +1,147 @@
-import Box from "@mui/material/Box";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import { EmployeeAvatar } from "../EmployeeAvatar/EmployeeAvatar.tsx";
+import AddIcon from "@mui/icons-material/Add";
+import {
+  Box,
+  Checkbox,
+  FormControlLabel,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
+import { ReactNode } from "react";
+import { AvatarRow } from "../AvatarRow";
 import { ProgressBar } from "../ProgressBar";
-import styles from "./Tasks.module.scss";
-import { tasks } from "./constants.ts";
+import { TableHeader } from "../TableHeader";
 
-const columns: GridColDef<(typeof tasks)[number]>[] = [
-  {
-    field: "task",
-    headerName: "TASK",
-    width: 150,
-  },
-  {
-    field: "due",
-    headerName: "DUE",
-    width: 150,
-  },
-  {
-    field: "member",
-    headerName: "MEMBER",
-    width: 150,
-    renderCell: () => {
-      return <EmployeeAvatar />;
-    },
-  },
-  {
-    field: "progress",
-    headerName: "PROGRESS",
-    width: 150,
-    renderCell: (params) => {
-      return <ProgressBar value={Number(params.value)} />;
-    },
-  },
+function createData(
+  task: ReactNode,
+  due: string,
+  member: ReactNode,
+  progress: ReactNode
+) {
+  return { task, due, member, progress };
+}
+
+const headerRows = ["TASK", "DUE", "MEMBER", "PROGRESS"];
+
+const rows = [
+  createData(
+    <FormControlLabel
+      control={
+        <Checkbox
+          value={String("Task 1")}
+          sx={{
+            "& .MuiSvgIcon-root": {
+              fontSize: 20,
+              opacity: 0.4,
+            },
+            "&.Mui-checked": {
+              color: "red",
+            },
+          }}
+        />
+      }
+      label={"Task 1"}
+    />,
+    "Jun 30, 2024",
+    <AvatarRow />,
+    <ProgressBar value={25} />
+  ),
+  createData(
+    <FormControlLabel
+      control={
+        <Checkbox
+          value={String("Task 2")}
+          sx={{
+            "& .MuiSvgIcon-root": {
+              fontSize: 20,
+              opacity: 0.4,
+            },
+            "&.Mui-checked": {
+              color: "red",
+            },
+          }}
+        />
+      }
+      label={"Task 2"}
+    />,
+    "Jun 30, 2024",
+    <AvatarRow />,
+    <ProgressBar value={50} />
+  ),
+  createData(
+    <FormControlLabel
+      control={
+        <Checkbox
+          value={String("Task 3")}
+          sx={{
+            "& .MuiSvgIcon-root": {
+              fontSize: 20,
+              opacity: 0.4,
+            },
+            "&.Mui-checked": {
+              color: "red",
+            },
+          }}
+        />
+      }
+      label={"Task 3"}
+    />,
+    "Jun 30, 2024",
+    <AvatarRow />,
+    <ProgressBar value={100} />
+  ),
 ];
 
 export const Tasks = () => {
   return (
-    <Box sx={{ height: "fit-content", width: "fit-content" }}>
-      <DataGrid
-        rows={tasks}
-        columns={columns}
-        pageSizeOptions={[5]}
-        checkboxSelection
-        disableRowSelectionOnClick
-        hideFooter
-        classes={{
-          columnHeaders: styles.tasks__columnHeaders,
-          columnHeader: styles.tasks__columnHeader,
-
-          columnHeaderTitle: styles.tasks__columnHeaderTitle,
-          columnHeaderTitleContainer: styles.tasks__columnHeaders,
-        }}
+    <Box sx={{ width: 650 }}>
+      <TableHeader
+        label="Tasks"
+        icon={<AddIcon />}
       />
+      <TableContainer
+        component={Paper}
+        sx={{ borderRadius: "0", boxShadow: "none", maxWidth: 650 }}
+      >
+        <Table
+          aria-label="tasks table"
+          sx={{ maxWidth: 650, border: "1px solid #e0e0e0" }}
+        >
+          <TableHead
+            sx={{ backgroundColor: "#f7f8fc", borderRadius: "0", height: 20 }}
+          >
+            <TableRow>
+              {headerRows.map((header) => (
+                <TableCell
+                  key={header}
+                  sx={{ fontSize: 12 }}
+                >
+                  {header}
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map(({ task, due, member, progress }, index) => (
+              <TableRow key={`task-${index}`}>
+                <TableCell
+                  component="th"
+                  scope="row"
+                >
+                  {task}
+                </TableCell>
+                <TableCell>{due}</TableCell>
+                <TableCell>{member}</TableCell>
+                <TableCell>{progress}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Box>
   );
 };

@@ -1,5 +1,6 @@
 import AddIcon from "@mui/icons-material/Add";
 import CalendarTodayRoundedIcon from "@mui/icons-material/CalendarTodayRounded";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
 import { MouseEvent, useState } from "react";
@@ -81,13 +82,14 @@ export const EmployeeStats = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundColor: "#000000",
-              color: "#ffffff",
+              backgroundColor: "#ffffff",
+              color: "#000000",
               fontSize: 12,
               padding: "5px 10px",
             }}
           >
-            Export
+            <FileDownloadOutlinedIcon sx={{ fontSize: 16 }} />
+            <Typography sx={{ ml: 1, fontSize: 12 }}>Export</Typography>
           </Button>
           <Button
             variant="contained"
