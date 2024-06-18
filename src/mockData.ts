@@ -24,7 +24,7 @@ const employees = [
     status: "Active",
   },
 ];
-const taks = [
+const tasks = [
   {
     id: 1,
     taskName: "Task 1",

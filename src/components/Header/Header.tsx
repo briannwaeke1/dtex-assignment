@@ -18,9 +18,7 @@ export const Header = () => {
       </Box>
       <Box className={styles.rightContainer}>
         <SearchBar />
-
         <CalendarTodayIcon className={styles.iconButton} />
-
         <NotificationsIcon className={styles.iconButton} />
       </Box>
     </Box>
