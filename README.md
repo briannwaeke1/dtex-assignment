@@ -2,6 +2,16 @@
 
 Disclaimer: I was not able to complete the "Schedule" component due to time constraints.
 
+#### Instructions to run locally
+
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+
+Installation: `npm install`
+
+To Run locally: `npm run dev`
+
+To Visit App:`http://localhost:5173/`
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
