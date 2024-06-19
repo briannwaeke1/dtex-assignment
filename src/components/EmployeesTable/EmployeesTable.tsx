@@ -13,7 +13,14 @@ import {
   Typography,
 } from "@mui/material";
 import { ReactNode } from "react";
-import { TableToolBar } from "../TableToolBar";
+import { TableToolbar } from "../TableToolbar";
+
+export const Status = () => (
+  <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+    <OutboundOutlinedIcon sx={{ fontSize: 16 }} />
+    <Typography sx={{ fontSize: 14 }}>Active</Typography>
+  </Box>
+);
 
 function createData(
   employeeName: ReactNode,
@@ -37,26 +44,20 @@ const rows = [
   createData(
     <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
       <Avatar
-        key={1}
         alt="Employee Avatar"
         src="../../public/pic.png"
         sx={{ width: 24, height: 24, border: "none" }}
       />
-
       <Typography>Darrel Steward</Typography>
     </Box>,
     "#E3041",
     "janedoe@mail.com",
     "Sr Software Engineer",
-    <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-      <OutboundOutlinedIcon sx={{ fontSize: 16 }} />
-      <Typography sx={{ fontSize: 14 }}>Active</Typography>
-    </Box>
+    <Status />
   ),
   createData(
     <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
       <Avatar
-        key={1}
         alt="Employee Avatar"
         src="../../public/pic.png"
         sx={{ width: 24, height: 24, border: "none" }}
@@ -67,17 +68,14 @@ const rows = [
     "#E3042",
     "jondoe@mail.com",
     "Sr Software Engineer",
-    <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-      <OutboundOutlinedIcon sx={{ fontSize: 16 }} />
-      <Typography sx={{ fontSize: 14 }}>Active</Typography>
-    </Box>
+    <Status />
   ),
 ];
 
-export const Employees = () => {
+export const EmployeesTable = () => {
   return (
-    <Box sx={{ width: "100%" }}>
-      <TableToolBar
+    <Box>
+      <TableToolbar
         label="Employees"
         icon={<MoreHorizIcon sx={{ fontSize: 16 }} />}
       />

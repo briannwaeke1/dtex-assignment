@@ -33,7 +33,7 @@ export const icons = {
   TaskIcon,
 };
 
-export const teamManagementItems: MenuItems[] = [
+export const teamMenuItems: MenuItems[] = [
   { label: "Employee", icon: "PeopleIcon" },
   { label: "Onboarding", icon: "PersonAddAlt1Icon" },
   { label: "Leave", icon: "CalendarTodayRoundedIcon" },
@@ -45,7 +45,7 @@ export const teamManagementItems: MenuItems[] = [
   { label: "Feedback", icon: "CampaignIcon" },
 ];
 
-export const financesItems: MenuItems[] = [
+export const financesMenuItems: MenuItems[] = [
   { label: "Payroll", icon: "PaidIcon" },
   { label: "Invoices", icon: "CreditCardIcon" },
   { label: "Billing", icon: "TaskIcon" },

@@ -18,7 +18,7 @@ import {
 import cn from "classnames";
 import styles from "./SideDrawer.module.scss";
 import { SideDrawerProps } from "./SideDrawer.types.ts";
-import { financesItems, icons, teamManagementItems } from "./constants.ts";
+import { financesMenuItems, icons, teamMenuItems } from "./constants.ts";
 
 export const SideDrawer = ({ open, onOpen }: SideDrawerProps) => {
   return (
@@ -57,14 +57,12 @@ export const SideDrawer = ({ open, onOpen }: SideDrawerProps) => {
           </IconButton>
         </Box>
         {open && (
-          <Box>
-            <Card className={styles.drawerHeader_card}>
-              <ViewComfyRoundedIcon />
-              <Box className={styles.cardText}>
-                <Typography>Dashboard</Typography>
-              </Box>
-            </Card>
-          </Box>
+          <Card className={styles.drawerHeader_card}>
+            <ViewComfyRoundedIcon />
+            <Box className={styles.cardText}>
+              <Typography>Dashboard</Typography>
+            </Box>
+          </Card>
         )}
       </Box>
       <Divider sx={{ ml: 2, mr: 2 }} />
@@ -83,7 +81,7 @@ export const SideDrawer = ({ open, onOpen }: SideDrawerProps) => {
           </ListSubheader>
         }
       >
-        {teamManagementItems.map(({ label, icon }) => {
+        {teamMenuItems.map(({ label, icon }) => {
           const Icon = icons[icon];
           return (
             <ListItem
@@ -119,7 +117,7 @@ export const SideDrawer = ({ open, onOpen }: SideDrawerProps) => {
           </ListSubheader>
         }
       >
-        {financesItems.map(({ label, icon }) => {
+        {financesMenuItems.map(({ label, icon }) => {
           const Icon = icons[icon];
           return (
             <ListItem

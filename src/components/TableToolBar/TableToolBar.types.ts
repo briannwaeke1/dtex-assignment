@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type TableToolBarProps = {
+export type TableToolbarProps = {
   label: string;
   icon: ReactNode;
 };

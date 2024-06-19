@@ -14,7 +14,7 @@ import {
 import { ReactNode } from "react";
 import { AvartarList } from "../AvartarList";
 import { ProgressBar } from "../ProgressBar";
-import { TableToolBar } from "../TableToolBar";
+import { TableToolbar } from "../TableToolbar";
 
 function createData(
   task: ReactNode,
@@ -96,10 +96,10 @@ const rows = [
   ),
 ];
 
-export const Tasks = () => {
+export const TasksTable = () => {
   return (
     <Box sx={{ width: "100%" }}>
-      <TableToolBar
+      <TableToolbar
         label="Today's Tasks"
         icon={<AddIcon sx={{ fontSize: 16 }} />}
       />

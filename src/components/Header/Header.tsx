@@ -8,15 +8,13 @@ import styles from "./Header.module.scss";
 export const Header = () => {
   return (
     <Box className={styles.headerContainer}>
-      <Box className={styles.greeting}>
-        <Box className={styles.timeIconContainer}>
+      <Box className={styles.greetingContainer}>
+        <Box className={styles.dayIcon}>
           <WbSunnyIcon className={styles.headerIcon} />
         </Box>
-        <Typography className={styles.headerTitle}>
-          Good morning, Brian!
-        </Typography>
+        <Typography>Good morning, Brian!</Typography>
       </Box>
-      <Box className={styles.rightContainer}>
+      <Box className={styles.actionButtonsContainer}>
         <SearchBar />
         <CalendarTodayIcon className={styles.iconButton} />
         <NotificationsIcon className={styles.iconButton} />

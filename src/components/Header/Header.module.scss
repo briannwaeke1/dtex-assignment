@@ -7,12 +7,13 @@
   height: 60px;
   align-items: center;
   border: 1px solid #e0e0e0;
+  border-bottom: none;
   justify-content: space-between;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
-.greeting {
+.greetingContainer {
   display: flex;
   font-size: 20px;
   font-weight: 600;
@@ -20,13 +21,13 @@
   white-space: nowrap;
 }
 
-.timeIconContainer {
+.dayIcon {
   display: flex;
   align-items: center;
   margin-right: 5px;
 }
 
-.rightContainer {
+.actionButtonsContainer {
   display: flex;
   flex-direction: row;
   align-items: center;

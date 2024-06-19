@@ -1,13 +1,13 @@
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import { TableToolBar } from "../TableToolBar";
+import { TableToolbar } from "../TableToolbar";
 import styles from "./Payroll.module.scss";
 import { icons, payroll } from "./constants";
 
 export const Payroll = () => {
   return (
     <Box>
-      <TableToolBar
+      <TableToolbar
         label="Employee payroll"
         icon={<MoreHorizIcon sx={{ fontSize: 16 }} />}
       />

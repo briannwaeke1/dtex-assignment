@@ -1,8 +1,8 @@
 import { IconButton, Toolbar, Typography } from "@mui/material";
 import styles from "./TableToolBar.module.scss";
-import { TableToolBarProps } from "./TableToolBar.types";
+import { TableToolbarProps } from "./TableToolbar.types";
 
-export const TableToolBar = ({ label, icon }: TableToolBarProps) => {
+export const TableToolbar = ({ label, icon }: TableToolbarProps) => {
   return (
     <Toolbar className={styles.container}>
       <Typography variant="inherit">{label}</Typography>

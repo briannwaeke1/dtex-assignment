@@ -10,12 +10,12 @@
   justify-content: space-between;
 }
 
-.rightContainer {
+.buttonsContainer {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 
-.statsCardContainer {
+.cardsContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
