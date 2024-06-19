@@ -4,7 +4,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { CustomCard } from "../CustomCard/index.ts";
 import { CustomMenu } from "../CustomMenu";
 import styles from "./EmployeeSummary.module.scss";
-import { employeeStatsItems } from "./constants.ts";
+import { employeeSummaryData } from "./constants.ts";
 
 export const EmployeeSummary = () => {
   return (
@@ -38,10 +38,10 @@ export const EmployeeSummary = () => {
       </Box>
 
       <Box className={styles.cardsContainer}>
-        {employeeStatsItems.map((item) => (
+        {employeeSummaryData.map((data) => (
           <CustomCard
-            key={item.label}
-            data={item}
+            key={data.label}
+            data={data}
           />
         ))}
       </Box>

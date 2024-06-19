@@ -1,7 +1,9 @@
-import { Box, Typography } from "@mui/material";
-import LinearProgress, {
+import {
+  Box,
+  LinearProgress,
   LinearProgressProps,
-} from "@mui/material/LinearProgress";
+  Typography,
+} from "@mui/material";
 
 export const ProgressBar = (props: LinearProgressProps & { value: number }) => {
   return (

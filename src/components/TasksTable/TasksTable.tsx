@@ -36,7 +36,7 @@ const rows = [
           sx={{
             "& .MuiSvgIcon-root": {
               fontSize: 20,
-              opacity: 0.4,
+              opacity: 0.8,
             },
             "&.Mui-checked": {
               color: "red",
@@ -58,7 +58,7 @@ const rows = [
           sx={{
             "& .MuiSvgIcon-root": {
               fontSize: 20,
-              opacity: 0.4,
+              opacity: 0.8,
             },
             "&.Mui-checked": {
               color: "red",
@@ -80,7 +80,7 @@ const rows = [
           sx={{
             "& .MuiSvgIcon-root": {
               fontSize: 20,
-              opacity: 0.4,
+              opacity: 0.8,
             },
             "&.Mui-checked": {
               color: "red",

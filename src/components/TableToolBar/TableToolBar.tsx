@@ -9,7 +9,7 @@ export const TableToolbar = ({ label, icon }: TableToolbarProps) => {
       <IconButton
         disableRipple
         sx={{
-          border: label === "Tasks" ? "1px solid #e0e0e0" : "none",
+          border: label === "Today's Tasks" ? "1px solid #e0e0e0" : "none",
           borderRadius: "5px",
           padding: "5px",
         }}

@@ -4,7 +4,7 @@ import { employees } from "./constants.ts";
 export const AvartarList = () => {
   return (
     <AvatarGroup
-      max={5}
+      max={4}
       sx={{
         display: "flex",
         justifyContent: "start",

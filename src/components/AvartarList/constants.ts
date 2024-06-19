@@ -31,12 +31,4 @@ export const employees = [
     role: "Sr Software Engineer",
     status: "Active",
   },
-  {
-    employeeId: "#E3033",
-    employeeName: "Jane Doe",
-
-    employeeEmail: "janedoe@mail.com",
-    role: "Sr Software Engineer",
-    status: "Active",
-  },
 ];
