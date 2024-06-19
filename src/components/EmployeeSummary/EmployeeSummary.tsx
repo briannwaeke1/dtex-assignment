@@ -4,11 +4,11 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
 import { MouseEvent, useState } from "react";
-import { StatsCard } from "../StatsCard";
-import styles from "./EmployeeStats.module.scss";
+import { CustomCard } from "../CustomCard/index.ts";
+import styles from "./EmployeeSummary.module.scss";
 import { employeeStatsItems } from "./constants.ts";
 
-export const EmployeeStats = () => {
+export const EmployeeSummary = () => {
   const [sortValue, setSortValue] = useState<string | null>(null);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -28,10 +28,10 @@ export const EmployeeStats = () => {
             startIcon={<CalendarTodayRoundedIcon />}
             endIcon={<KeyboardArrowDownIcon />}
             variant="outlined"
-            id="stats-sort-button"
+            id="menu-button"
             onClick={handleClick}
             defaultValue="Monthly"
-            aria-controls={open ? "stats-sort-button" : undefined}
+            aria-controls={open ? "menu-button" : undefined}
             aria-expanded={open ? "true" : undefined}
             sx={{
               backgroundColor: "#ffffff",
@@ -48,8 +48,8 @@ export const EmployeeStats = () => {
         <Menu
           open={open}
           anchorEl={anchorEl}
-          id="stats-sort-menu"
-          aria-controls={open ? "stats-sort-button" : undefined}
+          id="menu-button"
+          aria-controls={open ? "menu-button" : undefined}
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
           anchorOrigin={{
@@ -68,7 +68,7 @@ export const EmployeeStats = () => {
           defaultValue="Monthly"
           onClose={handleClose}
           MenuListProps={{
-            "aria-labelledby": "stats-sort-button",
+            "aria-labelledby": "menu-button",
           }}
         >
           <MenuItem
@@ -84,7 +84,7 @@ export const EmployeeStats = () => {
             sx={{
               backgroundColor: "#ffffff",
               color: "#000000",
-              fontSize: 12,
+
               padding: "5px 10px",
             }}
           >
@@ -96,7 +96,7 @@ export const EmployeeStats = () => {
             sx={{
               backgroundColor: "red",
               color: "#ffffff",
-              fontSize: 12,
+
               padding: "5px 10px",
             }}
           >
@@ -108,9 +108,9 @@ export const EmployeeStats = () => {
 
       <Box className={styles.statsCardContainer}>
         {employeeStatsItems.map((item) => (
-          <StatsCard
+          <CustomCard
             key={item.label}
-            stats={item}
+            data={item}
           />
         ))}
       </Box>

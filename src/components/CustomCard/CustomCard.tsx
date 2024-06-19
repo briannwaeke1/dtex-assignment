@@ -1,10 +1,10 @@
 import OutboundOutlinedIcon from "@mui/icons-material/OutboundOutlined";
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import styles from "./StatsCard.module.scss";
-import { StatsCardProps } from "./StatsCard.types";
+import styles from "./CustomCard.module.scss";
+import { CustomCardProps } from "./CustomCard.types";
 
-export const StatsCard = ({ stats }: StatsCardProps) => {
-  const { label, amount, diff } = stats;
+export const CustomCard = ({ data }: CustomCardProps) => {
+  const { label, amount, diff } = data;
   return (
     <Card
       className={styles.container}

@@ -12,9 +12,9 @@ import {
   TableRow,
 } from "@mui/material";
 import { ReactNode } from "react";
-import { AvatarRow } from "../AvatarRow";
+import { AvartarList } from "../AvartarList";
 import { ProgressBar } from "../ProgressBar";
-import { TableHeader } from "../TableHeader";
+import { TableToolBar } from "../TableToolBar";
 
 function createData(
   task: ReactNode,
@@ -47,7 +47,7 @@ const rows = [
       label={"Task 1"}
     />,
     "Jun 30, 2024",
-    <AvatarRow />,
+    <AvartarList />,
     <ProgressBar value={25} />
   ),
   createData(
@@ -69,7 +69,7 @@ const rows = [
       label={"Task 2"}
     />,
     "Jun 30, 2024",
-    <AvatarRow />,
+    <AvartarList />,
     <ProgressBar value={50} />
   ),
   createData(
@@ -91,43 +91,46 @@ const rows = [
       label={"Task 3"}
     />,
     "Jun 30, 2024",
-    <AvatarRow />,
+    <AvartarList />,
     <ProgressBar value={100} />
   ),
 ];
 
 export const Tasks = () => {
   return (
-    <Box sx={{ width: 650 }}>
-      <TableHeader
-        label="Tasks"
-        icon={<AddIcon />}
+    <Box sx={{ width: "100%" }}>
+      <TableToolBar
+        label="Today's Tasks"
+        icon={<AddIcon sx={{ fontSize: 16 }} />}
       />
       <TableContainer
         component={Paper}
-        sx={{ borderRadius: "0", boxShadow: "none", maxWidth: 650 }}
+        sx={{ borderRadius: "0", boxShadow: "none" }}
       >
         <Table
           aria-label="tasks table"
-          sx={{ maxWidth: 650, border: "1px solid #e0e0e0" }}
+          sx={{ border: "1px solid #e0e0e0" }}
         >
           <TableHead
-            sx={{ backgroundColor: "#f7f8fc", borderRadius: "0", height: 20 }}
+            sx={{
+              backgroundColor: "#f7f8fc",
+              "& th": {
+                fontSize: 12,
+              },
+            }}
           >
             <TableRow>
-              {headerRows.map((header) => (
-                <TableCell
-                  key={header}
-                  sx={{ fontSize: 12 }}
-                >
-                  {header}
-                </TableCell>
+              {headerRows.map((item) => (
+                <TableCell key={item}>{item}</TableCell>
               ))}
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map(({ task, due, member, progress }, index) => (
-              <TableRow key={`task-${index}`}>
+              <TableRow
+                key={`task-${index}`}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
                 <TableCell
                   component="th"
                   scope="row"

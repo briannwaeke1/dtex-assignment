@@ -1,26 +1,23 @@
-.footerContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-}
-
 .container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.cardsContainer {
+  background-color: #f7f8fc;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   gap: 5px;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .card {
-  width: 100%;
-  padding: 2px;
-  height: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
 }

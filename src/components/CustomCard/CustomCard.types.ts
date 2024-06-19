@@ -1,5 +1,5 @@
-export type StatsCardProps = {
-  stats: {
+export type CustomCardProps = {
+  data: {
     label: string;
     amount: number;
     diff: number;

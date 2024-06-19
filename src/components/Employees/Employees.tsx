@@ -13,7 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import { ReactNode } from "react";
-import { TableHeader } from "../TableHeader";
+import { TableToolBar } from "../TableToolBar";
 
 function createData(
   employeeName: ReactNode,
@@ -77,9 +77,9 @@ const rows = [
 export const Employees = () => {
   return (
     <Box sx={{ width: "100%" }}>
-      <TableHeader
+      <TableToolBar
         label="Employees"
-        icon={<MoreHorizIcon />}
+        icon={<MoreHorizIcon sx={{ fontSize: 16 }} />}
       />
       <TableContainer
         component={Paper}

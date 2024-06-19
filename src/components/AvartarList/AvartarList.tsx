@@ -1,7 +1,7 @@
 import { Avatar, AvatarGroup } from "@mui/material";
 import { employees } from "./constants.ts";
 
-export const AvatarRow = () => {
+export const AvartarList = () => {
   return (
     <AvatarGroup
       max={5}

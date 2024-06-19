@@ -1,17 +1,17 @@
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import { TableHeader } from "../TableHeader";
+import { TableToolBar } from "../TableToolBar";
 import styles from "./Payroll.module.scss";
 import { icons, payroll } from "./constants";
 
 export const Payroll = () => {
   return (
-    <Box className={styles.container}>
-      <TableHeader
-        label="Payroll"
-        icon={<MoreHorizIcon />}
+    <Box>
+      <TableToolBar
+        label="Employee payroll"
+        icon={<MoreHorizIcon sx={{ fontSize: 16 }} />}
       />
-      <Box className={styles.cardsContainer}>
+      <Box className={styles.container}>
         {payroll.map(({ label, amount, icon }) => {
           const Icon = icons[icon];
           return (
@@ -21,18 +21,10 @@ export const Payroll = () => {
               variant="outlined"
             >
               <CardContent>
-                <Box className={styles.headerContainer}>
-                  <Typography
-                    sx={{ fontSize: 14 }}
-                    gutterBottom
-                  >
-                    {label}
-                  </Typography>
-                </Box>
-                <Box className={styles.footerContainer}>
-                  <Icon />
-
-                  <Typography sx={{ fontSize: 20 }}>{amount}</Typography>
+                <Typography>{label}</Typography>
+                <Box className={styles.cardFooter}>
+                  <Icon sx={{ fontSize: 20 }} />
+                  <Typography>{amount}</Typography>
                 </Box>
               </CardContent>
             </Card>
