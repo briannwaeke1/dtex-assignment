@@ -45,7 +45,7 @@ const rows = [
     <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
       <Avatar
         alt="Employee Avatar"
-        src="../../public/pic.png"
+        src="/pic.png"
         sx={{ width: 24, height: 24, border: "none" }}
       />
       <Typography>Darrel Steward</Typography>
@@ -59,7 +59,7 @@ const rows = [
     <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
       <Avatar
         alt="Employee Avatar"
-        src="../../public/pic.png"
+        src="/pic.png"
         sx={{ width: 24, height: 24, border: "none" }}
       />
 
