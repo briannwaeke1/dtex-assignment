@@ -1,4 +1,4 @@
-export type SideDrawerProps = {
+export type NavigationDrawerProps = {
   open: boolean;
   onOpen: () => void;
 };

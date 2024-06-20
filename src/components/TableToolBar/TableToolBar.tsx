@@ -1,5 +1,5 @@
 import { IconButton, Toolbar, Typography } from "@mui/material";
-import styles from "./TableToolBar.module.scss";
+import styles from "./TableToolbar.module.scss";
 import { TableToolbarProps } from "./TableToolbar.types";
 
 export const TableToolbar = ({ label, icon }: TableToolbarProps) => {

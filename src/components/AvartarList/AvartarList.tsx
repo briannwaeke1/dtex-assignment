@@ -15,7 +15,7 @@ export const AvartarList = () => {
         <Avatar
           key={employeeId}
           alt={employeeName}
-          src="../../public/pic.png"
+          src="/pic.png"
           sx={{ width: 24, height: 24, border: "none" }}
         />
       ))}

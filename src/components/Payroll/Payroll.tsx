@@ -6,12 +6,12 @@ import { icons, payroll } from "./constants";
 
 export const Payroll = () => {
   return (
-    <Box>
+    <Box className={styles.container}>
       <TableToolbar
         label="Employee payroll"
         icon={<MoreHorizIcon sx={{ fontSize: 16 }} />}
       />
-      <Box className={styles.container}>
+      <Box className={styles.content}>
         {payroll.map(({ label, amount, icon }) => {
           const Icon = icons[icon];
           return (
@@ -21,10 +21,19 @@ export const Payroll = () => {
               variant="outlined"
             >
               <CardContent>
-                <Typography>{label}</Typography>
+                <Typography color="text.secondary">{label}</Typography>
+
                 <Box className={styles.cardFooter}>
-                  <Icon sx={{ fontSize: 20 }} />
-                  <Typography>{amount}</Typography>
+                  <Icon sx={{ fontSize: 16, color: "text.secondary" }} />
+                  <Typography
+                    sx={{
+                      marginLeft: "5px",
+                      fontSize: 14,
+                      color: "text.secondary",
+                    }}
+                  >
+                    {amount}
+                  </Typography>
                 </Box>
               </CardContent>
             </Card>

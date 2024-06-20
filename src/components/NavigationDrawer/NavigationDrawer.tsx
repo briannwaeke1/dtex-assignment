@@ -16,11 +16,11 @@ import {
   Typography,
 } from "@mui/material";
 import cn from "classnames";
-import styles from "./SideDrawer.module.scss";
-import { SideDrawerProps } from "./SideDrawer.types.ts";
+import styles from "./NavigationDrawer.module.scss";
+import { NavigationDrawerProps } from "./NavigationDrawer.types.ts";
 import { financesMenuItems, icons, teamMenuItems } from "./constants.ts";
 
-export const SideDrawer = ({ open, onOpen }: SideDrawerProps) => {
+export const NavigationDrawer = ({ open, onOpen }: NavigationDrawerProps) => {
   return (
     <Drawer
       anchor="left"
@@ -40,7 +40,7 @@ export const SideDrawer = ({ open, onOpen }: SideDrawerProps) => {
           {open && (
             <AccountBoxRoundedIcon
               sx={{
-                fontSize: 35,
+                fontSize: 30,
                 color: "red",
               }}
             />
@@ -51,14 +51,14 @@ export const SideDrawer = ({ open, onOpen }: SideDrawerProps) => {
             })}
           >
             <ViewSidebarIcon
-              sx={{ rotate: "180deg" }}
+              sx={{ color: "text.secondary", rotate: "180deg" }}
               onClick={onOpen}
             />
           </IconButton>
         </Box>
         {open && (
           <Card className={styles.drawerHeader_card}>
-            <ViewComfyRoundedIcon />
+            <ViewComfyRoundedIcon sx={{ color: "text.secondary" }} />
             <Box className={styles.cardText}>
               <Typography>Dashboard</Typography>
             </Box>

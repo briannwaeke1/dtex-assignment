@@ -4,34 +4,25 @@
   border: 1px solid #e0e0e0;
   width: 100%;
   border-radius: 10px;
-  padding: 0;
-  margin: 0;
 }
 
-.cardFooter {
+.footerContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
-  width: 100%;
+  justify-content: space-between;
 }
 
-.footerText {
-  font-size: 14px;
-  color: #000000;
-}
-
-.footer_rightContainer {
+.footerItem {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2px;
 }
 
-.cardHeader {
+.headerContainer {
   display: flex;
   flex-direction: row;
-  gap: 5px;
   align-items: center;
+  margin-bottom: 5px;
 }

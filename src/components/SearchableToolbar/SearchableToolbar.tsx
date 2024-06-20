@@ -1,11 +1,13 @@
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import { Box, Typography } from "@mui/material";
 import { SearchBar } from "../SearchBar";
-import styles from "./Header.module.scss";
 
-export const Header = () => {
+import styles from "./SearchableToolbar.module.scss";
+
+export const SearchableToolbar = () => {
   return (
     <Box className={styles.headerContainer}>
       <Box className={styles.greetingContainer}>
@@ -16,8 +18,8 @@ export const Header = () => {
       </Box>
       <Box className={styles.actionButtonsContainer}>
         <SearchBar />
-        <CalendarTodayIcon className={styles.iconButton} />
-        <NotificationsIcon className={styles.iconButton} />
+        <CalendarTodayIcon sx={{ color: "text.secondary" }} />
+        <NotificationsIcon sx={{ color: "text.secondary" }} />
       </Box>
     </Box>
   );

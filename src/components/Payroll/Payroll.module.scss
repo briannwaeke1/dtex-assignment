@@ -1,11 +1,11 @@
-.container {
+.content {
   background-color: #f7f8fc;
   border: 1px solid #e0e0e0;
-  padding: 20px;
+  padding: 20px 10px;
   display: flex;
   flex-direction: row;
   gap: 5px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .card {
@@ -20,4 +20,9 @@
   align-items: center;
   gap: 5px;
   margin-top: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
 }

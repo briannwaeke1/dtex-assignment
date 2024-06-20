@@ -1,30 +1,23 @@
 import { Box } from "@mui/material";
-import cn from "classnames";
 import { useState } from "react";
-import styles from "./App.module.scss";
-import { SideDrawer } from "./components/SideDrawer";
+import { NavigationDrawer } from "./components/NavigationDrawer";
 import { Dashboard } from "./views/Dashboard";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(true);
+  const contentWidth = drawerOpen ? 300 : 70;
 
   const handleDrawerOpen = () => {
     setDrawerOpen(!drawerOpen);
   };
   return (
-    <main>
-      <SideDrawer
+    <Box>
+      <NavigationDrawer
         open={drawerOpen}
         onOpen={handleDrawerOpen}
       />
-      <Box
-        className={cn(styles.content, {
-          [styles.content_mini_nav]: !drawerOpen,
-        })}
-      >
-        <Dashboard />
-      </Box>
-    </main>
+      <Dashboard contentWidth={contentWidth} />
+    </Box>
   );
 }
 

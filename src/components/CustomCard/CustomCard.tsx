@@ -8,23 +8,31 @@ export const CustomCard = ({ data }: CustomCardProps) => {
   const { label, amount, diff, icon } = data;
   const Icon = icons[icon as keyof typeof icons];
   return (
-    <Card
-      className={styles.container}
-      variant="outlined"
-    >
-      <CardContent>
-        <Box className={styles.cardHeader}>
-          <Icon />
-          <Typography sx={{ fontSize: 14 }}>{label}</Typography>
+    <Card sx={{ display: "flex", width: "100%", margin: 0, padding: 0 }}>
+      <CardContent sx={{ flex: "1 0 auto" }}>
+        <Box className={styles.headerContainer}>
+          <Icon sx={{ fontSize: 16, color: "text.secondary" }} />
+          <Typography
+            color="text.secondary"
+            sx={{
+              marginLeft: "5px",
+              fontSize: 14,
+            }}
+          >
+            {label}
+          </Typography>
         </Box>
-        <Box className={styles.cardFooter}>
-          <Typography sx={{ fontSize: 20 }}>{amount}</Typography>
+        <Box className={styles.footerContainer}>
+          <Box className={styles.footerItem}>
+            <Typography sx={{ fontSize: 20, fontWeight: 500 }}>
+              {amount}
+            </Typography>
+          </Box>
 
-          <Box className={styles.footer_rightContainer}>
+          <Box className={styles.footerItem}>
             <OutboundOutlinedIcon sx={{ fontSize: 16, color: "green" }} />
-            <Typography sx={{ fontSize: 14, color: "green" }}>
-              {`+${diff}%`}{" "}
-              <span className={styles.footerText}>last month</span>
+            <Typography sx={{ fontSize: 14 }}>
+              {`+${diff}% last month`}
             </Typography>
           </Box>
         </Box>
